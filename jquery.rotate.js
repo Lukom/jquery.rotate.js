@@ -64,8 +64,8 @@ $.cssHooks.rotate = {
   get: function( elem, computed ) {
     var transform = $.data( elem, 'transform' );
     return transform && transform.rotate?
-      // Make sure the value is always between 0 and 2PI
-      (transform.rotate + (transform.rotate < 0? 2*Math.PI : 0))%(2*Math.PI) :
+      // Make sure the value is always between -2PI and 2PI
+      transform.rotate%(2*Math.PI) :
       0;
   }
 }
