@@ -12,8 +12,7 @@
   
 var div = document.createElement('div'),
   divStyle = div.style,
-  support = $.support,
-  rmatrixFilter = /M\d{2}=([\d+.\-]+)/g;
+  support = $.support;
 
 support.transform = 
   divStyle.MozTransform === ''? 'MozTransform' :
