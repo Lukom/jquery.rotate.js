@@ -21,6 +21,8 @@ support.transform =
   false));
 support.matrixFilter = !support.transform && divStyle.filter === '';
 
+div = null;
+
 $.cssNumber.rotate = true;
 $.cssHooks.rotate = {
   set: function( elem, value ) {
