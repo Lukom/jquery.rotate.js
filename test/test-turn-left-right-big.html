@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Test turning big image</title>
+	<style type="text/css">
+		.pic-cell {
+			text-align: center;
+			vertical-align: middle;
+			width: 300px;
+			height: 900px;
+			background-color: #444;
+		}
+	</style>
+</head>
+<body>
+	<h2>Turning big image</h2>
+	<p>
+		You can see in various browsers (especially in firefox)
+		that turning image using <em style="color:green">"css transform"</em> property
+		is more cpu-spare than using <em style="color:red">"canvas"</em> like
+		<a href="test-turn-left-right-big-2.html">in this test</a>.
+		<br/>So <a href="http://github.com/lrbabe/jquery.rotate.js">jquery.rotate.js</a> plugin is better :)
+	</p>
+
+	<script>
+		var cur_angle = 0;
+	</script>
+
+	<table>
+	<tr>
+		<td><button onclick="cur_angle -= 180; $('#pic').animate({rotate: cur_angle+'deg'}, 1000);">turn left</button></td>
+		<td class="pic-cell">
+			<img id="pic" src="windmill-big.jpg" width="1280" height="800" alt=""/>
+		</td>
+		<td><button onclick="cur_angle += 180; $('#pic').animate({rotate: cur_angle+'deg'}, 1000);">turn right</button></td>
+	</tr>
+	</table>
+
+	<script src="jquery.js"></script>
+	<script src="../jquery.rotate.js"></script>
+</body>
+</html>
