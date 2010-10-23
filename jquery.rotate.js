@@ -66,10 +66,10 @@ $.cssHooks.rotate = {
     var transform = $.data( elem, 'transform' );
     return transform && transform.rotate ? transform.rotate : 0;
   }
-}
+};
 $.fx.step.rotate = function( fx ) {
   $.cssHooks.rotate.set( fx.elem, fx.now+fx.unit );
-}
+};
 
 function radToDeg( rad ) {
   return rad * 180 / Math.PI;
